@@ -22,26 +22,29 @@ footer.container {
 }
 $sans-serif-bold: 400 1rem 'Neufreit', Arial, Helvetica, sans-serif;
 
+// Colors!
 $gray: #757575;
 $gray2: #acacac;
-$orange: #fb9722;
-$purple-blue: #7782ea;
-$green: #39FDA6;
-$black: #505050;
+$primary-color: #505050;
+$link-color: #3f5ed1;
+$secondary-color: #faa321;
 
 body {
 	color: #303030; //soften the blacks.
 }
 a{
-	color: $purple-blue;
+	color: $link-color;
 	transition: all 0.3s;
 	&:hover {
 		// text-decoration: none;
-		color: $purple-blue;
+		color: $link-color;
 	}
 }
 h1,h2,h3 {
 	font: $sans-serif-bold;
+	a{
+		color: $primary-color;
+	}
 }
 h1 {
 	font-size: 3rem;
@@ -49,21 +52,19 @@ h1 {
 }
 h2 {
 	font-size: 2rem;
-	color: $black;
 }
 h3 {
 	font-size: 1.5rem;
-	color: $black;
 	margin-top: 1em;
 }
 
 header {
-	background: url(/assets/img/skyline-abstract-charlotte.jpg) no-repeat center center;
+	background: url(/assets/img/abstract-header-bg.jpg) no-repeat center center;
 	background-size: cover;
 	padding: 0 !important;
 	#logo {
 			display: block;
-			width: 22vw;
+			width: 7vw;
 			padding: 40px 0px 0px;
 			margin: auto;
 	}
@@ -78,7 +79,7 @@ header {
 
 a.cta {
 	font: $sans-serif-bold;
-	background-color: $purple-blue;
+	background-color: $primary-color;
 	color: white;
 	border-radius: 100px;
 	padding: 10px 30px;
@@ -160,10 +161,10 @@ nav.navbar {
 		background: $gray;
 	}
 	33% {
-		background: $purple-blue;
+		background: $primary-color;
 	}
 	66% {
-		background: $orange;
+		background: $secondary-color;
 	}
 	100% {
 		background: $gray;
@@ -288,9 +289,6 @@ footer {
 
 @media (max-width: 1300px) {
 	header {
-		#logo {
-			width: 275px;
-		}
 		.welcome {
 			font-size: 22px;
 		}
